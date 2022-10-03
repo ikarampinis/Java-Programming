@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="run"  name="hw3">
+
+	<target name="run" depends="compile" >
+        <java classname="ce326.hw3.myFilebrowser" fork="true" >
+			<classpath path="build/classes"/>
+		</java>
+    </target>
+	
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac includeantruntime="false" srcdir="src" destdir="build/classes"/>
+    </target>
+	
+</project>
